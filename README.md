@@ -1,1 +1,2 @@
+[![CircleCI](https://circleci.com/gh/rshekhar-java/sfg-pet-clinic/tree/master.svg?style=svg&circle-token=b789ff7f6a000f0bc0f86b522ca56c085c96d1fb)](https://circleci.com/gh/rshekhar-java/sfg-pet-clinic/tree/master)
 # Spring Boot Web Application
