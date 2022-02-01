@@ -28,7 +28,7 @@ public class ProductController {
         return "products";
     }
 
-    @RequestMapping("product/{id}")
+    @RequestMapping("product/show/{id}")
     public String showProduct(@PathVariable Integer id, Model model){
         model.addAttribute("product", productService.getProductById(id));
         return "productshow";
@@ -51,6 +51,17 @@ public class ProductController {
 
         productService.saveProduct(product);
 
-        return "redirect:/product/" + product.getId();
+        return "redirect:/product/show/" + product.getId();
+    }
+
+    @RequestMapping("product/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        productService.deleteProduct(id);
+        return "redirect:/products";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(){
+        return "login";
     }
 }
